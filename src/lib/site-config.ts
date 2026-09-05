@@ -12,10 +12,13 @@ export const siteConfig = {
   defaultTitle: "PM — Formations & Consulting en Marketing Digital et Génie Civil",
   defaultDescription:
     "PM accompagne particuliers et professionnels avec des formations et du consulting en Marketing Digital et en Génie Civil & Géotechnique.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  // `||` (pas `??`) : une variable d'environnement définie mais vide (ex.
+  // ajoutée sans valeur sur Vercel) doit aussi déclencher le repli, sinon
+  // `new URL("")` fait planter tout le build (voir metadataBase du layout).
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
   whatsapp: {
-    pm: process.env.NEXT_PUBLIC_WHATSAPP_PM ?? "0000000000",
-    pherina: process.env.NEXT_PUBLIC_WHATSAPP_PHERINA ?? "0000000000",
-    maurisson: process.env.NEXT_PUBLIC_WHATSAPP_MAURISSON ?? "0000000000",
+    pm: process.env.NEXT_PUBLIC_WHATSAPP_PM || "0000000000",
+    pherina: process.env.NEXT_PUBLIC_WHATSAPP_PHERINA || "0000000000",
+    maurisson: process.env.NEXT_PUBLIC_WHATSAPP_MAURISSON || "0000000000",
   },
 } as const;
