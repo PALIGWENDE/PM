@@ -15,7 +15,7 @@ export function ProfileGrid({ people }: { people: PersonView[] }) {
               alt={person.nom}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
           <div className="flex flex-1 flex-col p-6">

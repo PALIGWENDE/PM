@@ -1,6 +1,6 @@
 import { urlForImage } from "../../sanity/lib/image";
-import type { Faq, Formation, Person, Service } from "@/types/sanity";
-import type { FaqView, FormationView, PersonView, ServiceView } from "@/types/content";
+import type { Faq, Formation, Person, Service, Temoignage } from "@/types/sanity";
+import type { FaqView, FormationView, PersonView, ServiceView, TemoignageView } from "@/types/content";
 
 export function toFormationView(formation: Formation): FormationView {
   return {
@@ -46,4 +46,8 @@ export function toPersonView(person: Person): PersonView {
 
 export function toFaqView(faq: Faq): FaqView {
   return { id: faq._id, question: faq.question, reponse: faq.reponse };
+}
+
+export function toTemoignageView(temoignage: Temoignage): TemoignageView {
+  return { id: temoignage._id, citation: temoignage.citation, nom: temoignage.nom };
 }

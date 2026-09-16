@@ -18,6 +18,10 @@ export function getSessionMessage(prenom: string): string {
   return `Bonjour, je m'appelle ${prenom}. Je souhaite réserver une session individuelle (1-to-1). Quelles sont vos disponibilités ?`;
 }
 
+export function getOffreConsultingMessage(offre: string): string {
+  return `Bonjour, je suis intéressé(e) par votre offre "${offre}". Pouvez-vous me donner plus d'informations ?`;
+}
+
 export function getGeneralMessage(): string {
   return "Bonjour, je découvre le site PM et j'aimerais en savoir plus sur vos formations et vos services.";
 }

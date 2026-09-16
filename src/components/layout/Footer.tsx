@@ -33,9 +33,9 @@ const navColumns = [
   },
 ];
 
-// Placeholders — à remplacer par les vrais liens du client (voir TODO-CLIENT.md).
+// LinkedIn/Facebook restent des placeholders — à remplacer par les vrais liens du client (voir TODO-CLIENT.md).
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram", Icon: Instagram },
+  { href: "https://www.instagram.com/pm_afrique", label: "Instagram", Icon: Instagram },
   { href: "https://linkedin.com", label: "LinkedIn", Icon: Linkedin },
   { href: "https://facebook.com", label: "Facebook", Icon: Facebook },
 ];

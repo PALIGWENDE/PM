@@ -49,3 +49,9 @@ export type FaqView = {
   question: string;
   reponse: PortableTextBlock[] | string;
 };
+
+export type TemoignageView = {
+  id: string;
+  citation: string;
+  nom?: string;
+};

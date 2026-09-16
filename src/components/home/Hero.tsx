@@ -2,34 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Home,
-  BookOpen,
-  MessageCircle,
-  ArrowUpRight,
-  GraduationCap,
-  Clock,
-  Laptop,
-} from "lucide-react";
+import { ArrowUpRight, GraduationCap, Clock, Laptop } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppButton } from "@/components/whatsapp/WhatsAppButton";
 import { getFormationMessage, getGeneralMessage } from "@/lib/whatsapp-messages";
 import { siteConfig } from "@/lib/site-config";
 import pherinaPhoto from "../../../public/images/team/pherina-horizontal.png";
-import maurissonPhoto from "../../../public/images/team/maurisson-horizontal.jpeg";
-
-const dockLinks = [
-  { href: "/", label: "Accueil", Icon: Home },
-  { href: "/formations", label: "Formations", Icon: BookOpen },
-  { href: "/consulting", label: "Consulting", Icon: MessageCircle },
-];
+import maurissonPhoto from "../../../public/images/team/maurisson-costume.jpeg";
 
 /**
  * Hero de l'accueil — grande carte "device frame" en glassmorphism, inspirée
- * d'une maquette fournie par le client. Le dock d'icônes et les pastilles de
- * la barre du haut sont de vrais liens (pas de décoration factice) ; la
- * navigation principale accessible reste le header du site, au-dessus.
+ * d'une maquette fournie par le client. Les pastilles de la barre du haut
+ * sont de vrais liens (pas de décoration factice) ; la navigation principale
+ * accessible reste le header du site, au-dessus.
  *
  * Sur mobile, les cartes flottantes repassent dans le flux normal (empilées)
  * au lieu d'être positionnées en absolu, pour rester mobile-first.
@@ -57,24 +43,6 @@ export function Hero({ phone }: { phone?: string }) {
             <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-geo-500/40 blur-3xl" />
             <div className="absolute -bottom-32 -right-16 h-[28rem] w-[28rem] rounded-full bg-mkt-500/30 blur-3xl" />
           </div>
-
-          {/* Dock d'icônes — vrais liens, visible à partir de lg. */}
-          <nav
-            aria-label="Accès rapide"
-            className="absolute left-6 top-1/2 z-10 hidden -translate-y-1/2 flex-col items-center gap-2 rounded-full bg-white/10 p-2 backdrop-blur-md lg:flex"
-          >
-            {dockLinks.map(({ href, label, Icon }) => (
-              <Link
-                key={href}
-                href={href}
-                aria-label={label}
-                title={label}
-                className="flex h-11 w-11 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/15 hover:text-white"
-              >
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </Link>
-            ))}
-          </nav>
 
           <div className="relative z-10 flex flex-col px-5 pb-8 pt-5 sm:px-8 md:px-10 md:pb-10 md:pt-8 lg:px-12 lg:pb-56">
             {/* Barre du haut, façon pilule */}
@@ -113,7 +81,7 @@ export function Hero({ phone }: { phone?: string }) {
             </div>
 
             {/* Titre géant en surimpression */}
-            <div className="mt-14 max-w-2xl md:mt-20 lg:pl-16">
+            <div className="mt-14 max-w-2xl md:mt-20">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
                 PM — Pherina &amp; Maurisson
               </p>
@@ -123,8 +91,9 @@ export function Hero({ phone }: { phone?: string }) {
                 une seule marque.
               </h1>
               <p className="mt-6 max-w-md text-balance text-white/70">
-                [PLACEHOLDER] Phrase d&apos;accroche du Hero — à remplacer par le
-                texte exact fourni par le client.
+                Des formations pratiques et un accompagnement sur-mesure en
+                Marketing Digital et en Génie Civil &amp; Géotechnique,
+                portés par deux experts du terrain.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

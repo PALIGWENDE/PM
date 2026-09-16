@@ -10,18 +10,18 @@ Le cahier des charges initial n'a jamais été fourni avec son contenu réel
 (seulement le brief technique). Tous les textes ci-dessous sont donc des
 placeholders génériques, identifiés dans le code par `[PLACEHOLDER]` :
 
-- Titre et phrase d'accroche du Hero (accueil)
-- Textes des sections "Deux expertises", "Consulting", "Comment ça marche"
-  (les 3 étapes), "Pour qui" (accueil)
+- Textes des sections "Deux expertises", "Comment ça marche" (les 3 étapes),
+  "Pour qui" (accueil), intro de la page Formations, intro des pages
+  Expertises, page Contact
 - Questions/réponses de la FAQ (accueil)
-- Bios de Pherina et de Maurisson, et leurs titres/fonctions exacts (À propos)
-- Descriptions des services de consulting (Marketing Digital / Génie Civil &
-  Géotechnique)
-- Détail des 6 formations de démonstration (noms, descriptions, programmes,
-  tarifs, durées) — à remplacer par les vraies formations du client
 - Contenus des pages légales (mentions légales, confidentialité, CGV) — à
   rédiger avec un professionnel du droit
 - Texte exact des messages WhatsApp pré-remplis (`src/lib/whatsapp-messages.ts`)
+
+Déjà remplacés par du contenu réel (fourni par le client ou rédigé pour
+coller au site, à valider quand même) : titre et phrase d'accroche du Hero,
+bios de Pherina et de Maurisson (À propos), le détail des 6 formations, et
+la page Consulting (services, approche, cibles).
 
 Tout ce contenu se modifie depuis le Studio (`/studio`) une fois le projet
 Sanity connecté (voir point 2) — sauf les messages WhatsApp, qui sont dans le
@@ -80,8 +80,9 @@ image et pour équilibrer le contenu de démonstration, ce site suppose :
 
 ## 7. Réseaux sociaux
 
-Liens Instagram/LinkedIn/Facebook du footer pointent vers des URLs
-génériques (`instagram.com`, etc.). À remplacer par les vrais profils, soit
+Instagram renseigné : https://www.instagram.com/pm_afrique.
+LinkedIn/Facebook du footer pointent encore vers des URLs génériques
+(`linkedin.com`, `facebook.com`). À remplacer par les vrais profils, soit
 dans le code (`src/components/layout/Footer.tsx`), soit en les branchant au
 champ `reseauxSociaux` du document `settings` (déjà présent dans le schéma,
 pas encore branché au composant Footer par manque de vrais liens à afficher).
@@ -99,4 +100,5 @@ ligne.
 - `public/brand/favicon-source.png` — decliné en favicon (`src/app/icon.png`)
   et icône Apple (`src/app/apple-icon.png`)
 - `public/images/team/pherina-horizontal.png`, `pherina-vertical.png`
-- `public/images/team/maurisson-horizontal.jpeg`, `maurisson-alt.jpeg`
+- `public/images/team/maurisson-costume.jpeg` (photo utilisée sur le site),
+  `maurisson-horizontal.jpeg`, `maurisson-alt.jpeg` (non utilisées)

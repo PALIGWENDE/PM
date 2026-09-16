@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 import { BookIcon } from "@sanity/icons";
 
 export const DOMAINES_FORMATION = ["Marketing Digital", "Génie Civil", "Géotechnique"] as const;
-export const NIVEAUX_FORMATION = ["Débutant", "Intermédiaire", "Avancé"] as const;
+export const NIVEAUX_FORMATION = ["Débutant", "Débutant à intermédiaire", "Intermédiaire", "Avancé"] as const;
 export const TYPES_FORMATION = ["Individuel", "Groupe"] as const;
 
 export const formation = defineType({

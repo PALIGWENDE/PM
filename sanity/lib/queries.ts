@@ -1,5 +1,5 @@
 import { sanityFetch } from "./client";
-import type { Faq, Formation, LegalPage, Person, Service, Settings } from "@/types/sanity";
+import type { Faq, Formation, LegalPage, Person, Service, Settings, Temoignage } from "@/types/sanity";
 
 /**
  * Chaque fonction est volontairement tolérante aux pannes : si Sanity est
@@ -75,6 +75,13 @@ export async function getPeople(): Promise<Person[]> {
 export async function getFaqs(): Promise<Faq[]> {
   return safeFetch<Faq[]>(
     `*[_type == "faq"] | order(ordre asc) { _id, question, reponse, ordre }`,
+    [],
+  );
+}
+
+export async function getTemoignages(): Promise<Temoignage[]> {
+  return safeFetch<Temoignage[]>(
+    `*[_type == "temoignage"] | order(ordre asc) { _id, citation, nom, ordre }`,
     [],
   );
 }

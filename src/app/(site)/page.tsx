@@ -2,6 +2,7 @@ import Link from "next/link";
 import { TrendingUp, HardHat, User, Building2, ArrowUpRight } from "lucide-react";
 import { Hero } from "@/components/home/Hero";
 import { Steps } from "@/components/home/Steps";
+import { Testimonials } from "@/components/home/Testimonials";
 import { CTA } from "@/components/home/CTA";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -9,9 +10,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FormationCard } from "@/components/formations/FormationCard";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { WhatsAppButton } from "@/components/whatsapp/WhatsAppButton";
-import { getFormations, getFaqs } from "../../../sanity/lib/queries";
-import { toFormationView, toFaqView } from "@/lib/content-mappers";
-import { demoFormations, demoFaqs } from "@/content/demo-content";
+import { getFormations, getFaqs, getTemoignages } from "../../../sanity/lib/queries";
+import { toFormationView, toFaqView, toTemoignageView } from "@/lib/content-mappers";
+import { demoFormations, demoFaqs, demoTemoignages } from "@/content/demo-content";
 import { getConsultingMessage, getGeneralMessage } from "@/lib/whatsapp-messages";
 import { getWhatsappNumbers } from "@/lib/get-whatsapp-numbers";
 
@@ -34,14 +35,16 @@ const steps = [
 ];
 
 export default async function HomePage() {
-  const [rawFormations, rawFaqs, whatsapp] = await Promise.all([
+  const [rawFormations, rawFaqs, rawTemoignages, whatsapp] = await Promise.all([
     getFormations(),
     getFaqs(),
+    getTemoignages(),
     getWhatsappNumbers(),
   ]);
 
   const formations = rawFormations.length > 0 ? rawFormations.map(toFormationView) : demoFormations;
   const faqs = rawFaqs.length > 0 ? rawFaqs.map(toFaqView) : demoFaqs;
+  const temoignages = rawTemoignages.length > 0 ? rawTemoignages.map(toTemoignageView) : demoTemoignages;
   const formationsApercu = formations.slice(0, 3);
 
   return (
@@ -230,8 +233,26 @@ export default async function HomePage() {
         </Container>
       </Section>
 
+      {/* Témoignages */}
+      <Section tone="muted">
+        <Container>
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+              Témoignages
+            </p>
+            <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-ink md:text-4xl">
+              Ils en parlent mieux que nous.
+            </h2>
+          </Reveal>
+
+          <div className="mt-10">
+            <Testimonials temoignages={temoignages} />
+          </div>
+        </Container>
+      </Section>
+
       {/* FAQ */}
-      <Section id="faq" tone="muted">
+      <Section id="faq">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">FAQ</p>
@@ -247,7 +268,7 @@ export default async function HomePage() {
       </Section>
 
       {/* CTA WhatsApp */}
-      <Section>
+      <Section tone="muted">
         <CTA
           titre="Prêt(e) à démarrer avec PM ?"
           description="[PLACEHOLDER] Écrivez-nous sur WhatsApp, nous répondons rapidement pour construire ensemble la formule qui vous convient."

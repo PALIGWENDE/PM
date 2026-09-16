@@ -7,7 +7,7 @@ export type SanityImage = {
 };
 
 export type Domaine = "Marketing Digital" | "Génie Civil" | "Géotechnique";
-export type Niveau = "Débutant" | "Intermédiaire" | "Avancé";
+export type Niveau = "Débutant" | "Débutant à intermédiaire" | "Intermédiaire" | "Avancé";
 export type TypeFormation = "Individuel" | "Groupe";
 export type CategorieService = "Marketing Digital" | "Génie Civil & Géotechnique";
 
@@ -53,6 +53,13 @@ export type Faq = {
   _id: string;
   question: string;
   reponse: PortableTextBlock[];
+  ordre: number;
+};
+
+export type Temoignage = {
+  _id: string;
+  citation: string;
+  nom?: string;
   ordre: number;
 };
 
