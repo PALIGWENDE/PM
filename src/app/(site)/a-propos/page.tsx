@@ -35,7 +35,7 @@ export default async function AProposPage() {
             Pherina &amp; Maurisson
           </h1>
           <p className="mt-4 text-stone-600">
-            [PLACEHOLDER] Deux parcours, deux expertises, une seule ambition : rendre le Marketing
+            Deux parcours, deux expertises, une seule ambition : rendre le Marketing
             Digital et le Génie Civil &amp; Géotechnique accessibles à travers des formations et un
             accompagnement de qualité.
           </p>

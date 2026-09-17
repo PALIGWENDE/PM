@@ -27,7 +27,7 @@ export default async function FormationsPage() {
             Nos formations en Marketing Digital et Génie Civil &amp; Géotechnique.
           </h1>
           <p className="mt-4 max-w-xl text-stone-600">
-            [PLACEHOLDER] Toutes nos formations sont disponibles en ligne, en individuel ou en
+            Toutes nos formations sont disponibles en ligne, en individuel ou en
             groupe. Filtrez par domaine ou par format pour trouver celle qui vous correspond.
           </p>
         </Reveal>

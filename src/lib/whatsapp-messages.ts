@@ -1,9 +1,5 @@
 /**
  * Modèles de messages WhatsApp pré-remplis.
- *
- * ⚠️ PLACEHOLDER — le cahier des charges du client doit fournir le texte
- * exact de chaque message (voir TODO-CLIENT.md). Ces formulations sont
- * provisoires : ne pas les considérer comme validées côté client.
  */
 
 export function getFormationMessage(nomFormation: string): string {

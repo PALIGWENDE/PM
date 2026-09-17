@@ -19,18 +19,15 @@ import { getWhatsappNumbers } from "@/lib/get-whatsapp-numbers";
 const steps = [
   {
     titre: "Contactez-nous sur WhatsApp",
-    description:
-      "[PLACEHOLDER] Décrivez votre besoin (formation ou consulting) directement en message.",
+    description: "Décrivez votre besoin (formation ou consulting) directement en message.",
   },
   {
     titre: "Échangeons sur vos objectifs",
-    description:
-      "[PLACEHOLDER] Nous précisons ensemble le format, le calendrier et les modalités adaptées.",
+    description: "Nous précisons ensemble le format, le calendrier et les modalités adaptées.",
   },
   {
     titre: "Démarrez avec PM",
-    description:
-      "[PLACEHOLDER] Vous démarrez votre formation ou votre accompagnement en toute confiance.",
+    description: "Vous démarrez votre formation ou votre accompagnement en toute confiance.",
   },
 ];
 
@@ -72,7 +69,7 @@ export default async function HomePage() {
                 <TrendingUp className="h-9 w-9 text-mkt-600" aria-hidden="true" />
                 <h3 className="mt-5 text-xl font-semibold text-ink">Marketing Digital</h3>
                 <p className="mt-2 flex-1 text-sm text-stone-600">
-                  [PLACEHOLDER] Formations et consulting pour développer votre présence en ligne
+                  Formations et consulting pour développer votre présence en ligne
                   et vos performances digitales.
                 </p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-mkt-700">
@@ -90,7 +87,7 @@ export default async function HomePage() {
                 <HardHat className="h-9 w-9 text-geo-600" aria-hidden="true" />
                 <h3 className="mt-5 text-xl font-semibold text-ink">Génie Civil &amp; Géotechnique</h3>
                 <p className="mt-2 flex-1 text-sm text-stone-600">
-                  [PLACEHOLDER] Formations et consulting pour sécuriser vos projets de
+                  Formations et consulting pour sécuriser vos projets de
                   construction, du sol jusqu&apos;à l&apos;ouvrage.
                 </p>
                 <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-geo-700">
@@ -142,7 +139,7 @@ export default async function HomePage() {
                 Un accompagnement sur-mesure pour votre projet.
               </h2>
               <p className="mt-4 max-w-md text-stone-600">
-                [PLACEHOLDER] Au-delà des formations, PM accompagne les particuliers et les
+                Au-delà des formations, PM accompagne les particuliers et les
                 professionnels avec des prestations de consulting en Marketing Digital et en
                 Génie Civil &amp; Géotechnique.
               </p>
@@ -214,7 +211,7 @@ export default async function HomePage() {
                 <User className="h-8 w-8 text-ink" aria-hidden="true" />
                 <h3 className="mt-4 text-lg font-semibold text-ink">Particuliers</h3>
                 <p className="mt-2 text-sm text-stone-600">
-                  [PLACEHOLDER] Vous souhaitez monter en compétences ou être accompagné(e) sur un
+                  Vous souhaitez monter en compétences ou être accompagné(e) sur un
                   projet personnel.
                 </p>
               </div>
@@ -224,7 +221,7 @@ export default async function HomePage() {
                 <Building2 className="h-8 w-8 text-ink" aria-hidden="true" />
                 <h3 className="mt-4 text-lg font-semibold text-ink">Professionnels</h3>
                 <p className="mt-2 text-sm text-stone-600">
-                  [PLACEHOLDER] Votre équipe ou votre structure a besoin d&apos;une expertise
+                  Votre équipe ou votre structure a besoin d&apos;une expertise
                   ponctuelle ou continue.
                 </p>
               </div>
@@ -271,7 +268,7 @@ export default async function HomePage() {
       <Section tone="muted">
         <CTA
           titre="Prêt(e) à démarrer avec PM ?"
-          description="[PLACEHOLDER] Écrivez-nous sur WhatsApp, nous répondons rapidement pour construire ensemble la formule qui vous convient."
+          description="Écrivez-nous sur WhatsApp, nous répondons rapidement pour construire ensemble la formule qui vous convient."
           phone={whatsapp.pm}
           message={getGeneralMessage()}
           secondaryHref="/formations"

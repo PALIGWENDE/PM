@@ -44,7 +44,7 @@ export default async function ContactPage() {
             Parlons de votre projet.
           </h1>
           <p className="mt-4 text-stone-600">
-            [PLACEHOLDER] PM échange exclusivement sur WhatsApp. Choisissez le bon interlocuteur
+            PM échange exclusivement sur WhatsApp. Choisissez le bon interlocuteur
             ci-dessous selon votre besoin.
           </p>
         </Reveal>

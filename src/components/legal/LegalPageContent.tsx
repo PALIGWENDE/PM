@@ -18,9 +18,9 @@ export async function LegalPageContent({ slug, fallbackTitle }: { slug: string; 
             <PortableText value={page.contenu} />
           ) : (
             <p>
-              [PLACEHOLDER] Ce contenu doit être rédigé avec un professionnel du droit avant la
-              mise en ligne du site, puis publié depuis le Studio Sanity (type de contenu
-              « Page légale »).
+              Cette page est en cours de rédaction. Le contenu doit être rédigé avec un
+              professionnel du droit avant la mise en ligne définitive du site, puis publié
+              depuis le Studio Sanity (type de contenu « Page légale »).
             </p>
           )}
         </div>

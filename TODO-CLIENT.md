@@ -7,21 +7,20 @@ valider avant une mise en ligne définitive.
 ## 1. Contenu texte réel (le plus important)
 
 Le cahier des charges initial n'a jamais été fourni avec son contenu réel
-(seulement le brief technique). Tous les textes ci-dessous sont donc des
-placeholders génériques, identifiés dans le code par `[PLACEHOLDER]` :
+(seulement le brief technique). Tous les textes du site ont donc été
+rédigés pour coller au ton et à l'activité de PM (à défaut du texte exact
+du client), plutôt que de rester en `[PLACEHOLDER]` — **à relire et valider**
+avant une mise en ligne définitive, en particulier :
 
-- Textes des sections "Deux expertises", "Comment ça marche" (les 3 étapes),
-  "Pour qui" (accueil), intro de la page Formations, intro des pages
-  Expertises, page Contact
-- Questions/réponses de la FAQ (accueil)
-- Contenus des pages légales (mentions légales, confidentialité, CGV) — à
-  rédiger avec un professionnel du droit
+- Contenus des pages légales (mentions légales, confidentialité, CGV) —
+  seul contenu volontairement laissé en attente : à rédiger avec un
+  professionnel du droit, pas par une IA
 - Texte exact des messages WhatsApp pré-remplis (`src/lib/whatsapp-messages.ts`)
-
-Déjà remplacés par du contenu réel (fourni par le client ou rédigé pour
-coller au site, à valider quand même) : titre et phrase d'accroche du Hero,
-bios de Pherina et de Maurisson (À propos), le détail des 6 formations, et
-la page Consulting (services, approche, cibles).
+- Bios de Pherina et de Maurisson, détail des 6 formations, page Consulting,
+  témoignages : contenu réel fourni par le client
+- Tout le reste (accroches, sections "Deux expertises"/"Comment ça
+  marche"/"Pour qui", FAQ, intros de page) : rédigé par défaut, à ajuster
+  au besoin
 
 Tout ce contenu se modifie depuis le Studio (`/studio`) une fois le projet
 Sanity connecté (voir point 2) — sauf les messages WhatsApp, qui sont dans le

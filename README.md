@@ -121,8 +121,7 @@ public/images/team/      Photos de Pherina et Maurisson
 
 Point central du site : `src/lib/whatsapp.ts` (`buildWhatsAppLink`) construit
 les liens `wa.me`, `src/lib/whatsapp-messages.ts` centralise les messages
-pré-remplis (marqués `[PLACEHOLDER]` tant que le texte exact du client n'est
-pas fourni), et `<WhatsAppButton>` (`src/components/whatsapp/WhatsAppButton.tsx`)
+pré-remplis, et `<WhatsAppButton>` (`src/components/whatsapp/WhatsAppButton.tsx`)
 gère les 4 variantes visuelles (`primary`, `secondary`, `icon`, `floating`).
 
 ## Accessibilité et SEO

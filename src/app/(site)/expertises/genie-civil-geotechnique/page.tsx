@@ -42,7 +42,7 @@ export default async function GenieCivilGeotechniquePage() {
               Génie Civil &amp; Géotechnique
             </h1>
             <p className="mt-4 text-stone-600">
-              [PLACEHOLDER] Formations et consulting pour sécuriser vos projets de construction, du
+              Formations et consulting pour sécuriser vos projets de construction, du
               sol jusqu&apos;à l&apos;ouvrage.
             </p>
           </Reveal>
@@ -81,7 +81,7 @@ export default async function GenieCivilGeotechniquePage() {
       <Section tone="muted">
         <CTA
           titre="Un projet Génie Civil ou Géotechnique ?"
-          description="[PLACEHOLDER] Parlons-en directement sur WhatsApp."
+          description="Parlons-en directement sur WhatsApp."
           phone={whatsapp.pm}
           message={getConsultingMessage("Génie Civil & Géotechnique")}
         />

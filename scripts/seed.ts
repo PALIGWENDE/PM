@@ -498,12 +498,12 @@ async function seedFormations() {
 
 async function seedServices() {
   const services = [
-    { id: "service-audit-digital", nom: "Audit de présence digitale", categorie: "Marketing Digital", ordre: 1 },
-    { id: "service-gestion-reseaux", nom: "Gestion de réseaux sociaux", categorie: "Marketing Digital", ordre: 2 },
-    { id: "service-strategie-contenu", nom: "Stratégie de contenu", categorie: "Marketing Digital", ordre: 3 },
-    { id: "service-etude-geotechnique", nom: "Étude géotechnique de sol", categorie: "Génie Civil & Géotechnique", ordre: 4 },
-    { id: "service-suivi-chantier", nom: "Suivi de chantier", categorie: "Génie Civil & Géotechnique", ordre: 5 },
-    { id: "service-controle-qualite", nom: "Contrôle qualité des ouvrages", categorie: "Génie Civil & Géotechnique", ordre: 6 },
+    { id: "service-audit-digital", nom: "Audit de présence digitale", categorie: "Marketing Digital", description: "Un état des lieux complet de votre présence en ligne et des recommandations concrètes.", ordre: 1 },
+    { id: "service-gestion-reseaux", nom: "Gestion de réseaux sociaux", categorie: "Marketing Digital", description: "Création et animation de vos réseaux sociaux au quotidien.", ordre: 2 },
+    { id: "service-strategie-contenu", nom: "Stratégie de contenu", categorie: "Marketing Digital", description: "Une ligne éditoriale claire pour toucher la bonne audience.", ordre: 3 },
+    { id: "service-etude-geotechnique", nom: "Étude géotechnique de sol", categorie: "Génie Civil & Géotechnique", description: "Études de sol adaptées à votre projet de construction.", ordre: 4 },
+    { id: "service-suivi-chantier", nom: "Suivi de chantier", categorie: "Génie Civil & Géotechnique", description: "Un accompagnement rigoureux du chantier jusqu'à la réception.", ordre: 5 },
+    { id: "service-controle-qualite", nom: "Contrôle qualité des ouvrages", categorie: "Génie Civil & Géotechnique", description: "Vérification de la conformité et de la qualité des ouvrages réalisés.", ordre: 6 },
   ] as const;
 
   for (const s of services) {
@@ -512,7 +512,7 @@ async function seedServices() {
       _type: "service",
       nom: s.nom,
       categorie: s.categorie,
-      description: "[PLACEHOLDER] Description du service à compléter.",
+      description: s.description,
       ordre: s.ordre,
     });
   }
@@ -522,22 +522,22 @@ async function seedServices() {
 
 async function seedFaq() {
   const faqs = [
-    "[PLACEHOLDER] Comment s'inscrire à une formation ?",
-    "[PLACEHOLDER] Les formations sont-elles certifiantes ?",
-    "[PLACEHOLDER] Proposez-vous des sessions individuelles ?",
-    "[PLACEHOLDER] Quels sont les moyens de paiement acceptés ?",
+    { question: "Comment s'inscrire à une formation ?", reponse: "Contactez-nous directement sur WhatsApp depuis la fiche de la formation qui vous intéresse : nous confirmons ensemble les modalités et la disponibilité." },
+    { question: "Les formations sont-elles certifiantes ?", reponse: "Cela dépend de la formation. Le détail est précisé sur chaque fiche formation ; n'hésitez pas à nous demander par WhatsApp si ce n'est pas indiqué." },
+    { question: "Proposez-vous des sessions individuelles ?", reponse: "Oui, la plupart de nos formations sont disponibles en format individuel (1-to-1) ou en groupe, selon vos préférences." },
+    { question: "Quels sont les moyens de paiement acceptés ?", reponse: "Les modalités de paiement sont convenues directement avec vous lors de l'échange WhatsApp, selon la formation ou la prestation de consulting choisie." },
   ];
 
-  for (const [index, question] of faqs.entries()) {
+  for (const [index, faq] of faqs.entries()) {
     await client.createOrReplace({
       _id: `faq-${index + 1}`,
       _type: "faq",
-      question,
+      question: faq.question,
       reponse: [
         {
           _type: "block",
           _key: "r1",
-          children: [{ _type: "span", _key: "r1-span", text: "[PLACEHOLDER] Réponse à compléter." }],
+          children: [{ _type: "span", _key: "r1-span", text: faq.reponse }],
         },
       ],
       ordre: index + 1,
@@ -596,7 +596,7 @@ async function seedLegalPages() {
             {
               _type: "span",
               _key: "c1-span",
-              text: "[PLACEHOLDER] Contenu à rédiger avec un professionnel du droit avant mise en ligne.",
+              text: "Cette page est en cours de rédaction. Le contenu doit être rédigé avec un professionnel du droit avant la mise en ligne définitive du site.",
             },
           ],
         },

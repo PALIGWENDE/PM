@@ -40,7 +40,7 @@ export default async function MarketingDigitalPage() {
               Marketing Digital
             </h1>
             <p className="mt-4 text-stone-600">
-              [PLACEHOLDER] Formations et consulting pour développer votre présence en ligne, votre
+              Formations et consulting pour développer votre présence en ligne, votre
               contenu et vos performances digitales.
             </p>
           </Reveal>
@@ -79,7 +79,7 @@ export default async function MarketingDigitalPage() {
       <Section tone="muted">
         <CTA
           titre="Un projet Marketing Digital ?"
-          description="[PLACEHOLDER] Parlons-en directement sur WhatsApp."
+          description="Parlons-en directement sur WhatsApp."
           phone={whatsapp.pm}
           message={getConsultingMessage("Marketing Digital")}
         />
