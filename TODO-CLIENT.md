@@ -50,8 +50,9 @@ seed) au lieu de planter — c'est le comportement attendu, pas un bug.
 
 ## 4. Couleurs de marque
 
-Seul un logo rouge sur fond blanc/plein a été fourni (`public/brand/logo.png`
-et `public/brand/favicon-source.png`), sans charte graphique complète :
+Seul un logo rouge (`public/brand/logo.png`, transparent) et un favicon sur
+fond plein (`public/brand/favicon-source.png`) ont été fournis, sans charte
+graphique complète :
 
 - Accent "Génie Civil & Géotechnique" (`geo`, rouge `#D6272B`) : repris
   directement du logo.
@@ -60,14 +61,13 @@ et `public/brand/favicon-source.png`), sans charte graphique complète :
 
 À confirmer ou ajuster dans `tailwind.config.ts` (tokens `geo`/`mkt`).
 
-## 5. Logo sur fond sombre
+## 5. Logo
 
-Le fichier fourni a un fond plein (blanc pour le logo, rouge pour le
-favicon), pas de version transparente/blanche du symbole seul. Le footer
-(fond sombre) utilise donc un wordmark texte "PM" au lieu de l'image, et la
-carte "formation vedette" du Hero utilise un badge rond rouge avec le texte
-"PM" plutôt que le logo. Idéalement, demander au client un export du logo en
-blanc/transparent pour un rendu plus fidèle à ces deux endroits.
+Résolu : `public/brand/logo.png` est maintenant le logo réel du client, en
+PNG transparent — il s'affiche correctement aussi bien sur fond clair (header)
+que sur fond sombre (footer). Le favicon (`public/brand/favicon-source.png`)
+reste l'ancien fichier fourni (fond plein) ; à mettre à jour séparément si le
+client fournit une version transparente.
 
 ## 6. Attribution des domaines par personne
 

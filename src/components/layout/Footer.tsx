@@ -50,7 +50,7 @@ export function Footer({ whatsappPm }: { whatsappPm?: string }) {
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-4">
-            <Logo variant="wordmark" className="text-paper" />
+            <Logo />
             <p className="max-w-xs text-sm leading-relaxed">
               Formations et consulting en Marketing Digital et en Génie Civil &amp;
               Géotechnique.
